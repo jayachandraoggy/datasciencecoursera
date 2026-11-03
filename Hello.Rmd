@@ -1,26 +1,60 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
 
-```{r}
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
+
+```{r sessionInfo, echo=TRUE}
+sessionInfo()
+```
+
+```{r datasetscars, echo=TRUE}
+datasets::cars
+```
+
+```{r, echo=TRUE}
+ggplot2::mpg
+```
+
+```{r, echo=TRUE}
 mtcars
 ```
 
-
-```{r}
+```{r, echo=TRUE}
 plot(cars)
 ```
+
+```{r, echo=TRUE}
+plot(cars)
+```
+
+```{r, echo=TRUE}
+library(ggplot2)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+  geom_point()
+```
+
+
+
 
 
 ```{r}
 example
 ```
 
+\`\`\`
+
+To Check example variable data from Environment not loading in Knit Output
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
