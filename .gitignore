@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 Rplots.pdf
+
+# /brag skill output (HyperFrames render artifacts)
+brag-output/
+brag-output-*/
